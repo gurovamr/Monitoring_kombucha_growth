@@ -1,19 +1,19 @@
-#read_ph.py
+# monitor_voltage.py
 import serial
 import time
 
-port = '/dev/ttyACM0'
+port = '/dev/ttyACM0'  
 baud = 115200
 
 try:
     ser = serial.Serial(port, baud, timeout=2)
-    time.sleep(10)
-    print("Reading pH values...\n")
+    time.sleep(2)
+    print("Reading voltage and pH from Arduino...\n")
 
     while True:
         line = ser.readline().decode('utf-8', errors='ignore').strip()
         if line:
-            print("Current", line)
+            print("Arduino says:", line)
 
 except serial.SerialException as e:
     print("Serial error:", e)
