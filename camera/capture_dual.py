@@ -3,7 +3,7 @@ from datetime import datetime
 import subprocess
 import time
 
-save_dir = "/home/gurov/Monitoring_kombucha_growth/data"
+save_dir = "/home/gurov/Monitoring_kombucha_growth/data/Experiment_6"
 timestamp = datetime.now().strftime("%m-%d_%H-%M")
 
 cam0_file = f"{save_dir}/cam0_{timestamp}.jpg"
